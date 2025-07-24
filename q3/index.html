@@ -10,9 +10,43 @@
         <h1>מערכת דיווח על שימוש לקוי בתיבות דואר חכמות ומתלוננות</h1>
 
         <form id="reportForm" class="report-form">
-            <label>מזהה תיבה (1-9999): <input type="number" id="boxId"></label>
+            <label>מזהה תיבה (1-999): <input type="number" id="boxId"></label>
+
             <label>צבע התיבה: <input type="text" id="boxColor"></label>
 
+            <label>טון דיבור:
+                 <select id="tone">
+                    <option value="">בחר טון</option>
+                    <option value="רגזן">רגזן</option>
+                    <option value="ממלכתי">ממלכתי</option>
+                    <option value="נעים">נעים</option>
+                </select>
+            </label>
+
+            <label>כמות דואר שהוזנה: <input type="number" id="mailCount"></label>
+
+            <label>האם התיבה נסגרה? <input type="checkbox" id="closed"></label>
+
+            <label>סוג המשתמש:
+                <select id="userType">
+                    <option value="">בחר סוג</option>
+                    <option value="אדם">אדם</option>
+                    <option value="חתול">חתול</option>
+                    <option value="פיה">פיה</option>
+                </select>
+             </label>
+
+            <label>כתובת אימייל: <input type="text" id="email"></label>
+
+            <button type="submit">שלח דיווח</button>
         </form>
+
+        <div id="messages"></div>
+
+        <div class="link">
+           <a href="view.html">עבור לצפיה בכל התלונות</a>
+        </div>
+
+        <script src="script.js"></script>
     </body>
 </html>
